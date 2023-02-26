@@ -1,0 +1,89 @@
+body {
+  background-color: #fceed1;
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
+}
+
+#header {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 25px;
+}
+
+.item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+#inputText {
+  width: auto;
+  padding: 4px;
+  font-size: 25px;
+}
+
+button {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 22px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+button.removeAllItems:hover {
+  animation: wiggle 2s linear infinite;
+}
+
+#wrapper {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+
+  15% {
+    transform: rotateZ(-10deg);
+  }
+
+  20% {
+    transform: rotateZ(5deg);
+  }
+
+  25% {
+    transform: rotateZ(-5deg);
+  }
+
+  30% {
+    transform: rotateZ(4deg);
+  }
+
+  35% {
+    transform: rotateZ(-3deg);
+  }
+
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
